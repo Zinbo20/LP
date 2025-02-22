@@ -157,7 +157,9 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
          input --> val[ N = 2]
          val --> verification{ Primo % N = 0 ?}
          verification --> |Não| process[N = N + 1]
-         process --> verification2{N = Primo ?}
+         process --> verification3{N > Primo/2?}
+         verification3 --> |Não| verification2{N = Primo ?}
+         verification3 --> |Sim| false
          verification2 -->|Não| verification
          verification --> |Sim| false[/Não é Primo/] 
          verification2 --> |Sim| true[/É Primo/]
