@@ -121,11 +121,11 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       start(( Início )) --> input[\ Digite um número N \]
-      input --> process["Resultado += N * (N-1)"]
+      input --> verification{N = 0 ?}
       process --> process2["N = N-1"]
-      process2 --> verification{N = 0 ?}
-      verification --> |Não| process
-      verification --> |Sim| R[/Resultado/]
+      process2 --> verification
+      verification --> |Não| process["R = R * N"]
+      verification --> |Sim| R[/Resultado = R/]
       R --> finish([Fim])
       
    
