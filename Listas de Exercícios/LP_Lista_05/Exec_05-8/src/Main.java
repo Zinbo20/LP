@@ -17,15 +17,13 @@ public class Main {
             }
             System.out.println();
         }
-
-        n=0;
+        
 
         for (byte l = 0; l < linhas; l++) {   //mostrar diagonal principal
             for (byte c = 0; c < colunas; c++) {
-                if (c == n)
-                    System.out.println(matriz[l][n]);
+                if (c == l)
+                    System.out.println(matriz[l][c]);
             }
-            n++;
         }
 
 
