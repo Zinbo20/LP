@@ -19,7 +19,7 @@ public class Main {
         }
 
         int[] somaLinhas = new int[5];
-        int maiorLinha = matriz[0][0];
+        int maiorLinha = Integer.MIN_VALUE;
 
         for (byte l = 0; l < linhas; l++) {   //atribuir soma entre linhas
             for (byte c = 0; c < colunas; c++) {
@@ -31,7 +31,7 @@ public class Main {
         }
 
         int[] somaColunas = new int[5];
-        int maiorColuna = matriz[0][0];
+        int maiorColuna = Integer.MIN_VALUE;
 
         for (byte c = 0; c < colunas; c++) {
             for (byte l = 0; l < linhas; l++) {
