@@ -25,12 +25,9 @@ public class Main {
             for (byte c = 0; c < colunas; c++) {
                 somaLinhas[l] += matriz[l][c];
             }
-        }
-
-        for (int i = 0; i < somaLinhas.length ; i++) { // achar maior linha
-        //    System.out.println(somaLinhas[i]);
-            if (maiorLinha < somaLinhas[i])
-                maiorLinha = somaLinhas[i];
+            //System.out.println(somaLinhas[l]);
+            if (maiorLinha < somaLinhas[l])
+                maiorLinha = somaLinhas[l];
         }
 
         int[] somaColunas = new int[5];
@@ -40,13 +37,11 @@ public class Main {
             for (byte l = 0; l < linhas; l++) {
                 somaColunas[c] += matriz[l][c];
             }
+            //System.out.println(somaColunas[c]);
+            if (maiorColuna < somaColunas[c])
+                maiorColuna = somaColunas[c];
         }
 
-        for (int i = 0; i < somaColunas.length ; i++) {
-        //    System.out.println(somaColunas[i]);
-            if (maiorColuna < somaColunas[i])
-                maiorColuna = somaColunas[i];
-        }
 
         System.out.println();
         System.out.println("Maior soma entre linhas é " + maiorLinha);

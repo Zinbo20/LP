@@ -17,7 +17,6 @@ public class Main {
             }
             System.out.println();
         }
-        
 
         for (byte l = 0; l < linhas; l++) {   //mostrar diagonal principal
             for (byte c = 0; c < colunas; c++) {
